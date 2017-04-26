@@ -15,7 +15,8 @@ describe('collatzConjecture()', function(){
   })
 
   it('should return a string if an invalid number is given', function(){
-    expect( collatzConjecture( 0 ) ).to.eql('invalid input')
+    expect( () => { collatzConjecture( 0 ) } ).to.throw('invalid input')
+    expect( () => { collatzConjecture( 'fifteen' ) } ).to.throw('invalid input')
   })
 
 })

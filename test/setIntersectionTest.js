@@ -15,9 +15,9 @@ describe('setIntersection()', function(){
     expect( setIntersection( b, c ) ).to.eql([2])
   })
 
-  it('should return a string if an invalid number is given', function(){
-    expect( setIntersection( 'monkey', 12 ) ).to.equal('invalid input')
-    expect( setIntersection( [1, 2, 3], 123 ) ).to.equal('invalid input')
+  it('should throw an error when the input is invalid', function(){
+    expect( () => { setIntersection( 'monkey', 12 ) } ).to.throw('invalid input')
+    expect( () => { setIntersection( [1, 2, 3], 123 ) } ).to.throw('invalid input')
   })
 
 })

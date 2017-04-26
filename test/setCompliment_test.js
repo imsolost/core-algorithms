@@ -15,9 +15,9 @@ describe('setCompliment()', function(){
     expect( setCompliment( b, c ) ).to.eql([0, 5, 7])
   })
 
-  it('should return a string if an invalid number is given', function(){
-    expect( setCompliment( 'monkey', 12 ) ).to.equal('invalid input')
-    expect( setCompliment( [1, 2, 3], 123 ) ).to.equal('invalid input')
+  it('should throw an error when the input is invalid', function(){
+    expect( () => { setCompliment( 'monkey', 12 ) } ).to.throw('invalid input')
+    expect( () => { setCompliment( [1, 2, 3], 123 ) } ).to.throw('invalid input')
   })
 
 })

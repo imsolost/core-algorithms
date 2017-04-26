@@ -6,6 +6,10 @@ export default function makeChange({price, amountGiven}) {
     pennies: 0,
   }
 
+  if (typeof price !== 'number' || typeof amountGiven !== 'number') {
+    throw new Error( 'invalid input' )
+  }
+
   let difference = amountGiven - price
 
   while (difference > 24) {

@@ -1,7 +1,7 @@
 export default function setSymmetricDifference(arr1, arr2) {
 
   if ( ! Array.isArray(arr1) || ! Array.isArray(arr2) ) {
-    return 'invalid input'
+    throw new Error( 'invalid input' )
   }
 
   let set1 = arr1.filter( value => !arr2.includes(value) )

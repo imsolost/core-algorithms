@@ -15,9 +15,9 @@ describe('setUnion()', function(){
     expect( setUnion( b, c ) ).to.eql([2, 4, 6, 8, 0, 5, 7])
   })
 
-  it('should return a string if an invalid number is given', function(){
-    expect( setUnion( 'monkey', 12 ) ).to.equal('invalid input')
-    expect( setUnion( [1, 2, 3], 123 ) ).to.equal('invalid input')
+  it('should throw an error when the input is invalid', function(){
+    expect( () => { setUnion( 'monkey', 12 ) } ).to.throw('invalid input')
+    expect( () => { setUnion( [1, 2, 3], 123 ) } ).to.throw('invalid input')
   })
 
 })

@@ -15,9 +15,9 @@ describe('setSymmetricDifference()', function(){
     expect( setSymmetricDifference( b, c ) ).to.eql([4, 6, 8, 0, 5, 7])
   })
 
-  it('should return a string if an invalid number is given', function(){
-    expect( setSymmetricDifference( 'monkey', 12 ) ).to.equal('invalid input')
-    expect( setSymmetricDifference( [1, 2, 3], 123 ) ).to.equal('invalid input')
+  it('should throw an error when the input is invalid', function(){
+    expect( () => { setSymmetricDifference( 'monkey', 12 ) } ).to.throw('invalid input')
+    expect( () => { setSymmetricDifference( [1, 2, 3], 123 ) } ).to.throw('invalid input')
   })
 
 })

@@ -54,4 +54,9 @@ describe('makeChange()', function(){
   it('returns a respone when not enough payment is given', function(){
     expect(makeChange({price: 100, amountGiven: 97})).to.equal('That is not enough money!')
   })
+
+  it('throws an error when the input is invalid', function(){
+    expect( () => { makeChange({price: 'one hundred', amountGiven: '500'}) } ).to.throw('invalid input')
+  })
+
 })

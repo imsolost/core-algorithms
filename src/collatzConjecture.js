@@ -2,7 +2,7 @@ export default function collatzConjecture(number) {
   let array = []
 
   if (number <= 0 || number % 1 !== 0) {
-    return 'invalid input'
+    throw new Error( 'invalid input' )
   }
 
   while (number !== 1) {
