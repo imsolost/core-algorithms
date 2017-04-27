@@ -1,22 +1,20 @@
-export default function binarySearch(array, target) {
+export default function binarySearch( array, target ) {
   let l = 0, r = array.length - 1
 
-  if ( ! Array.isArray(array) || typeof(target) !== 'number' ) {
+  if ( !Array.isArray( array ) || typeof target !== 'number' ) {
     return 'invalid input'
   }
 
-  array = array.sort( (a, b) => a - b )
+  array = array.sort( ( a, b ) => a - b )
 
-  while (l < r) {
-    let mid = Math.floor( (l + r) / 2)
+  while ( l < r ) {
+    const mid = Math.floor( ( l + r ) / 2 )
 
-    if (array[mid] === target) {
+    if ( array[mid] === target ) {
       return mid
-    }
-    else if (array[mid] < target) {
+    } else if ( array[mid] < target ) {
       l = mid + 1
-    }
-    else {
+    } else {
       r = mid - 1
     }
   }

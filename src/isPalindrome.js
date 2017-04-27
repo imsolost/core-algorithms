@@ -1,16 +1,16 @@
-export default function isPalindrome(string) {
-  let reversedString = string
-    .replace(/[^A-Z0-9]/ig, "")
+export default function isPalindrome( string ) {
+  const reversedString = string
+    .replace( /[^A-Z0-9]/ig, '' )
     .toLowerCase()
-    .split('')
+    .split( '' )
     .reverse()
-    .join('')
+    .join( '' )
 
-  let modifiedString = string
-    .replace(/[^A-Z0-9]/ig, "")
+  const modifiedString = string
+    .replace( /[^A-Z0-9]/ig, '' )
     .toLowerCase()
 
-  if (modifiedString === reversedString) {
+  if ( modifiedString === reversedString ) {
     return true
   }
   return false

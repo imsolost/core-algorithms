@@ -7,10 +7,17 @@
     "babel-cli": "^6.18.0",
     "babel-preset-env": "^1.1.4",
     "babel-register": "^6.18.0",
+    "babel-eslint": "^7.1.1",
+    "eslint": "^3.17.1",
+    "eslint-config-airbnb": "^14.1.0",
+    "eslint-plugin-import": "^2.2.0",
+    "eslint-plugin-jsx-a11y": "^4.0.0",
+    "eslint-plugin-react": "^6.10.0",
     "chai": "~1.8.0",
     "mocha": "2.0.1"
   },
   "scripts": {
-    "test": "mocha --compilers js:babel-register"
+    "test": "mocha --compilers js:babel-register",
+    "lint": "eslint src/**"
   }
 }

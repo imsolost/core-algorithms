@@ -1,0 +1,46 @@
+{
+  "extends": "airbnb",
+  "parser": "babel-eslint",
+  "env": {
+    "browser": true,
+    "node": true,
+    "es6": true,
+    "mocha": true
+  },
+  "rules": {
+  "space-in-parens": ["error", "always", {
+    "exceptions": ["{}"]
+  }],
+  "padded-blocks": "off",
+  "semi": ["error", "never"],
+  "arrow-parens": "off",
+  "comma-dangle": "off",
+  "camelcase": "off",
+  "react/prop-types": "off",
+  "jsx-quotes": ["error", "prefer-single"],
+  "react/jsx-curly-spacing": ["error", "always"],
+  "react/jsx-wrap-multilines": "off",
+  "jsx-a11y/no-static-element-interactions": "off",
+  "react/jsx-filename-extension": "off",
+  "react/jsx-closing-bracket-location": "off",
+  "one-var-declaration-per-line": "off",
+  "consistent-return": "off",
+  "no-restricted-syntax": "off",
+  "no-else-return": "off",
+  "space-before-function-paren": "off",
+  "guard-for-in": "off",
+  "one-var": "off",
+    "valid-jsdoc": ["error", {
+      "requireReturn": true,
+      "requireReturnType": true,
+      "requireParamDescription": true,
+      "requireReturnDescription": true
+    }],
+  "linebreak-style": "off",
+  "import/no-extraneous-dependencies": "off",
+  "no-underscore-dangle": "off",
+  "no-unused-vars": ["error", {
+    "argsIgnorePattern": "^_"
+  }]
+  }
+}

@@ -1,13 +1,13 @@
-export default function bubbleSort(array) {
+export default function bubbleSort( array ) {
   let swapped, temp
 
-  if ( ! Array.isArray(array) ) {
+  if ( !Array.isArray( array ) ) {
     return 'invalid input'
   }
 
   do {
     swapped = false
-    for (let i = 0; i < array.length; i++) {
+    for ( let i = 0; i < array.length; i += 1 ) {
       if ( array[i] > array[i + 1] ) {
         temp = array[i]
         array[i] = array[i + 1]
@@ -15,7 +15,7 @@ export default function bubbleSort(array) {
         swapped = true
       }
     }
-  } while (swapped);
+  } while ( swapped )
 
   return array
 }

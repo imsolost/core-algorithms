@@ -1,24 +1,24 @@
-export default function fibonacci(number) {
+export default function fibonacci( number ) {
   let array = []
 
-  if (number <= 0 || number % 1 !== 0) {
+  if ( number <= 0 || number % 1 !== 0 ) {
     throw new Error( 'invalid input' )
   }
 
-  for (let i = number; i > 0; i--) {
-    array.push( fib(number) )
-    number--
+  function fib( num ) {
+    if ( num === 1 ) {
+      return 0
+    }
+    if ( num === 2 ) {
+      return 1
+    }
+    return fib( num - 1 ) + fib( num - 2 )
+  }
+
+  for ( let i = number; i > 0; i -= 1 ) {
+    array.push( fib( number ) )
+    number -= 1
   }
 
   return array.reverse()
-}
-
-function fib(number) {
-  if (number === 1) {
-    return 0
-  }
-  if (number === 2) {
-    return 1
-  }
-  return fib(number - 1) + fib(number - 2)
 }
