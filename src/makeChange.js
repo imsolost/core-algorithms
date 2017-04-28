@@ -13,23 +13,23 @@ export default function makeChange({ price, amountGiven }) {
   let difference = amountGiven - price
 
   while ( difference > 24 ) {
-    change.quarters += 1
+    change.quarters++
     difference -= 25
   }
 
   while ( difference > 9 ) {
-    change.dimes += 1
+    change.dimes++
     difference -= 10
   }
 
   while ( difference > 4 ) {
-    change.nickels += 1
+    change.nickels++
     difference -= 5
   }
 
   while ( difference > 0 ) {
-    change.pennies += 1
-    difference -= 1
+    change.pennies++
+    difference--
   }
 
   if ( difference < 0 ) {

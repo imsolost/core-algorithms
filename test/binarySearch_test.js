@@ -9,8 +9,11 @@ describe( 'binarySearch()', () => {
 
   it( 'should return the correct index of the array', () => {
     const a = [5, 10, 15, 20, 25, 30, 35, 40, 45, 50]
-    const b = [10, 4, 2, 8, 6]
     expect( binarySearch( a, 45 ) ).to.equal( 8 )
+  })
+
+  it( 'should return the correct index of the array', () => {
+    const b = [10, 4, 2, 8, 6]
     expect( binarySearch( b, 6 ) ).to.equal( 2 )
   })
 

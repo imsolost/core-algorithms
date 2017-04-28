@@ -15,9 +15,9 @@ export default function fibonacci( number ) {
     return fib( num - 1 ) + fib( num - 2 )
   }
 
-  for ( let i = number; i > 0; i -= 1 ) {
+  for ( let i = number; i > 0; i-- ) {
     array.push( fib( number ) )
-    number -= 1
+    number--
   }
 
   return array.reverse()

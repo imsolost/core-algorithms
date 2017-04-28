@@ -7,7 +7,7 @@ describe( 'connectedGraph()', () => {
     expect( connectedGraph ).to.be.a( 'function' )
   })
 
-  it( 'should return the correct sorted array', () => {
+  it( 'should return the true if the input is a connectedGraph', () => {
     const a = {
       a: ['b', 'c'],
       b: ['a', 'd'],
@@ -15,6 +15,16 @@ describe( 'connectedGraph()', () => {
       d: ['b', 'c'],
     }
     expect( connectedGraph( a ) ).to.equal( true )
+  })
+
+  it( 'should return the false if the input is not a connectedGraph', () => {
+    const b = {
+      a: ['b'],
+      b: ['a'],
+      c: ['d'],
+      d: ['c'],
+    }
+    expect( connectedGraph( b ) ).to.equal( false )
   })
 
   it( 'should throw an error when the input is invalid', () => {

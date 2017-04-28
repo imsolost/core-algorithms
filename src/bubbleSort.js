@@ -7,7 +7,7 @@ export default function bubbleSort( array ) {
 
   do {
     swapped = false
-    for ( let i = 0; i < array.length; i += 1 ) {
+    for ( let i = 0; i < array.length; i++ ) {
       if ( array[i] > array[i + 1] ) {
         temp = array[i]
         array[i] = array[i + 1]
